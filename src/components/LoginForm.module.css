@@ -1,0 +1,30 @@
+.LoginForm_title {
+  text-align: center;
+  color: rgb(61, 61, 61);
+}
+
+.LoginForm_form {
+  display: block;
+  margin: 30px auto;
+  width: 500px;
+}
+
+.LoginForm_btn {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 2px 2px 2px rgb(61, 61, 61);
+}
+
+.LoginForm_optionText {
+  color: rgb(61, 61, 61);
+  text-align: center;
+}
+
+.LoginForm_link {
+  margin-left: 5px;
+  color: rgb(14, 0, 0);
+}
+
+.LoginForm_link:hover {
+  color: rgb(0, 5, 98);
+}

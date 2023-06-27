@@ -1,0 +1,22 @@
+.navigation_list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation_item {
+  margin-right: 15px;
+}
+
+.navigation_item:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.navigation_link {
+  color: black;
+  text-decoration: none;
+}
+
+.navigation_link:hover {
+  color: white;
+}

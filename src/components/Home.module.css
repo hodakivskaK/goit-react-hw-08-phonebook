@@ -1,0 +1,25 @@
+.home_box {
+  margin-top: 45px;
+}
+
+.home_title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(255, 255, 255);
+}
+
+.home_text {
+  font-size: large;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home_link {
+  text-decoration: none;
+  color: rgba(0, 8, 53, 0.737);
+}
+
+.home_link:hover,
+.home_link:focus {
+  color: rgba(0, 16, 108, 0.737);
+}

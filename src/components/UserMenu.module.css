@@ -1,0 +1,13 @@
+.userMenu_box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 15px;
+  width: 1300px;
+  color: black;
+}
+
+.userMenu_btn {
+  margin: 10px;
+}
