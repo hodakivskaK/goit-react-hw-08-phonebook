@@ -2,6 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+
 const setAuthHeader = token =>
   (axios.defaults.headers.common.Authorization = `Bearer ${token}`);
 const cleanAuthHeader = () =>
@@ -52,14 +53,21 @@ export const logOut = createAsyncThunk(
   }
 );
 
+// refresh
 export const refreshUser = createAsyncThunk(
-  'auth/refreshUser',
+  'auth/refresh',
   async (_, { getState, rejectWithValue }) => {
-    const { token } = getState().auth;
-    token && setAuthHeader(token);
+    const state = getState();
+    const persistedToken = state.auth.token;
+
+      if (persistedToken === null) {
+      return rejectWithValue('Unable to fetch user');
+    }
 
     try {
+      setAuthHeader(persistedToken);
       const response = await axios.get('/users/current');
+
       return response.data;
     } catch (e) {
       return rejectWithValue(e.message);

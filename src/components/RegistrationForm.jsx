@@ -1,4 +1,4 @@
-import s from './RegistrationForm.module.css';
+import s from './style/RegistrationForm.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { register } from "../redux/auth/authOperation";

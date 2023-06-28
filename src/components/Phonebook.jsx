@@ -1,15 +1,15 @@
 import { nanoid } from 'nanoid'
 import { useSelector, useDispatch } from 'react-redux'
-import { useEffect } from 'react'
+
 
 import { setFilter } from 'redux/filter/filterSlice'
-import {fetchContacts, addContact} from 'redux/contacts/contactsOperation'
+import { addContact} from 'redux/contacts/contactsOperation'
 import { getContacts } from 'redux/contacts/contactsSelector'
 import { getFilter } from 'redux/filter/filterSelector'
 
 
 import { Section } from './Section'
-import { Form } from './Form'
+import { Form } from './ContactForm'
 import { Filter } from './Filter'
 import { Contacts } from './Contacts'
 
@@ -20,21 +20,18 @@ export const Phonebook = () => {
   const filterState = useSelector(getFilter);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchContacts())
-  }, [dispatch])
 
   const filterId = nanoid()
 
   // Send new contacts
-  const formSubmit = ( name, phone ) => {
+  const formSubmit = ( name, number ) => {
      const contact = {
       id: nanoid(),
       name,
-      phone,
+      number,
     };
 
-    if (name.length === 0 || phone.length === 0) {
+    if (name.length === 0 || number.length === 0) {
       return alert(`Field is empty`);
     }
 
@@ -42,8 +39,8 @@ export const Phonebook = () => {
        return alert(`${name} is already in contacts.`);
     }
 
-    if (contacts.find(contact => contact.phone === phone)) {
-       return alert(`Number: ${phone} is already in contacts.`);
+    if (contacts.find(contact => contact.number === number)) {
+       return alert(`Number: ${number} is already in contacts.`);
     }
 
     dispatch(addContact(contact))  

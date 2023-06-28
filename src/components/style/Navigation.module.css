@@ -1,4 +1,5 @@
 .navigation_list {
+  margin-left: 10vw;
   list-style: none;
   display: flex;
   justify-content: center;

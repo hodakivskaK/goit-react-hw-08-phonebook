@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import s from './Home.module.css'
+import s from '../components/style/Home.module.css'
 
-export const Home = () => {
+export default function HomePage() {
   
     
     return <div className={s.home_box}>

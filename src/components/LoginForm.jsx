@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import { login } from "../redux/auth/authOperation";
-import s from './LoginForm.module.css';
+import s from './style/LoginForm.module.css';
 
 export const LoginForm = ({ a }) => {
    const dispatch = useDispatch();

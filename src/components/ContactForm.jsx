@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { nanoid } from 'nanoid'
-import styleForm from "./form.module.css"
+import styleForm from "./style/ContactForm.module.css"
 
 
 export const Form = ({ onSubmit }) => {

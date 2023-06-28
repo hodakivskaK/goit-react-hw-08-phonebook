@@ -8,6 +8,13 @@
   color: black;
 }
 
+.userMenu_userName {
+  color: rgb(0, 0, 0);
+  font-size: large;
+  font-weight: 500;
+}
+
 .userMenu_btn {
-  margin: 10px;
+  margin-left: 12px;
+  min-width: 80px;
 }

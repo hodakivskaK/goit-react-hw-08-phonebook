@@ -1,30 +1,30 @@
-.registrationForm_title {
+.LoginForm_title {
   text-align: center;
-  color: rgb(61, 61, 61);
+  color: rgb(232, 232, 232);
 }
 
-.registrationForm_form {
+.LoginForm_form {
   display: block;
   margin: 30px auto;
   width: 500px;
 }
 
-.registrationForm_btn {
+.LoginForm_btn {
   display: block;
   margin: 0 auto;
   box-shadow: 2px 2px 2px rgb(61, 61, 61);
 }
 
-.registrationForm_optionText {
-  color: rgb(61, 61, 61);
+.LoginForm_optionText {
+  color: rgb(232, 232, 232);
   text-align: center;
 }
 
-.registrationForm_link {
+.LoginForm_link {
   margin-left: 5px;
   color: rgb(14, 0, 0);
 }
 
-.registrationForm_link:hover {
+.LoginForm_link:hover {
   color: rgb(0, 5, 98);
 }

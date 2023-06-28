@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
-import styleCon from "./contacts.module.css"
+import s from "./style/contacts.module.css"
 import { useDispatch } from "react-redux";
 
 import {  deleteContact } from "redux/contacts/contactsOperation";
 
 export const Contacts = ({ contacts }) => {
   const dispatch = useDispatch();
-
-
+  
     const onDeleteContact = (id) => {
     dispatch(deleteContact(id));
   }
  
-    return <ul className={styleCon.contactList}> {contacts.map(({ name, phone, id}) =>
-          (<li key={id} className={styleCon.contactItem}>
-        <p>{name} : {phone}</p>
+    return <ul className={s.contactList}> {contacts.map(({ name, number, id}) =>
+          (<li key={id} className={s.contactItem}>
+      <p>{name} <br />
+        {number}</p>
         
-        <button type="button" onClick={() => onDeleteContact(id)}> Delete</button>
+        <button type="button" onClick={() => onDeleteContact(id)} className={s.contact__btn}> Delete</button>
           </li>
           ))}
           
@@ -29,7 +29,7 @@ Contacts.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      phone: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
     }),
   ),
 };
